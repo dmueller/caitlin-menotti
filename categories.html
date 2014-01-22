@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Works by Caitlin Menotti</title>
+  <link rel="stylesheet" href="app.css"/>
+</head>
+
+<body>
+
+  <div id="app">
+
+    <header>
+      <h1>Page title?</h1>
+    </header>
+
+    <section id="main">
+      <ul id="category-list"></ul>
+    </section>
+
+    <footer>
+    last updated:
+    </footer>
+
+  </div>
+
+  <div id="credits">
+    works by Caitlin Menotti
+  </div>
+
+  <script src="vendor/json2.js"></script>
+  <script src="vendor/jquery.js"></script>
+  <script src="vendor/underscore.js"></script>
+  <script src="vendor/backbone.js"></script>
+  <script src="vendor/backbone.localStorage.js"></script>
+  <script src="assets/jobs.js"></script>
+  <script src="assets/categories.js"></script>
+  <script src="app.js"></script>
+
+  <!-- Templates -->
+  <script type="text/template" id="job-template">
+    <ul class="job-listing">
+      <li><%- title %></li>
+      <li><%- start_date %> - <%- end_date %></li>
+    </ul>
+  </script>
+
+  <script type="text/template" id="category-template">
+    <img src="assets/images/categories/<%- photo %>" width="350" height="300" alt="<%- alt %>" />
+    <p><%- name %></p>
+  </script>
+
+  <!-- could make a header template, though if it is duplicated across pages anyway.. -->
+  </body>
+</html>
